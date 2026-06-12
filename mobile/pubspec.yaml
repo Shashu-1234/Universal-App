@@ -1,0 +1,27 @@
+name: universal_smart_remote_ai
+description: Universal Smart Remote AI mobile application
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_riverpod: ^2.6.1
+  dio: ^5.9.0
+  hive: ^2.2.3
+  flutter_blue_plus: ^1.35.4
+  multicast_dns: ^0.3.3
+  speech_to_text: ^7.0.0
+  flutter_secure_storage: ^9.2.4
+  permission_handler: ^11.3.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
