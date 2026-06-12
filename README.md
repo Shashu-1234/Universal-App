@@ -1,28 +1,31 @@
 # Universal Smart Remote AI
 
-A production-ready mobile application (Android + iOS) that automatically discovers compatible nearby devices and generates customized remote controls dynamically based on the capabilities of each device.
+Production-ready cross-platform architecture for a dynamic universal smart remote with Flutter mobile + Node.js/TypeScript backend.
 
-## Project Overview
+## Implemented Deliverables
 
-**Universal Smart Remote AI** is a next-generation universal remote that works intelligently rather than relying on manually created remote templates.
+- Flutter mobile scaffold with runtime route structure and dynamic control rendering widget
+- Backend API service with endpoints for auth, discovery, devices, capabilities, remotes, actions, routines
+- Canonical protocol normalization and personal-device filtering logic
+- Capability analysis and schema-driven remote generation
+- OAuth2-style token + refresh scaffolding
+- PostgreSQL migration schema and Docker deployment stack (Postgres + Redis + backend)
+- CI workflow for backend build and tests
+- Unit tests for discovery normalization, schema generation, and voice command mapping
 
-### Core Features
-- 🔍 **Automatic Device Discovery** - Scans nearby devices via mDNS, SSDP, UPnP, Bluetooth, and ecosystem APIs
-- 🤖 **AI-Powered Classification** - Identifies device type, capabilities, and protocols automatically
-- ⚡ **Dynamic Remote Generation** - Creates custom remotes without hardcoded templates
-- 🎙️ **Voice Control** - Natural language commands
-- 🏠 **Smart Home Integration** - Works with Google Home, Alexa, Apple HomeKit, SmartThings
-- 🔒 **Enterprise Security** - OAuth2, encrypted communication, secure pairing
-- 📱 **Offline Support** - Control devices locally without cloud connection
-- 🧠 **AI Learning** - Adapts layouts based on usage patterns
+## Repository Structure
 
-### Supported Devices
-- **Entertainment**: Smart TVs, streaming boxes, soundbars, projectors
-- **Smart Home**: Lights, switches, plugs, fans, curtains, locks, sensors
-- **Climate Control**: AC units, thermostats, air purifiers, humidifiers
-- **Appliances**: Washing machines, refrigerators, microwaves, ovens
-- **Networking**: Routers, access points, media servers
+- `mobile/`: Flutter app scaffold and dynamic remote renderer
+- `backend/`: Node.js + TypeScript API service and tests
+- `docs/`: architecture, API, discovery, security, deployment, database docs
+- `infrastructure/`: Kubernetes deployment scaffold
 
-## Development Status
+## Backend Commands
 
-🚀 **In Active Development**
+```bash
+cd backend
+npm ci
+npm run build
+npm test
+npm start
+```
