@@ -1,0 +1,9 @@
+name: Backend Deploy
+on:
+  workflow_dispatch:
+jobs:
+  build-image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -f backend/docker/Dockerfile backend
