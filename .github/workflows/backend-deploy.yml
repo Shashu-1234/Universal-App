@@ -1,6 +1,8 @@
 name: Backend Deploy
 on:
   workflow_dispatch:
+permissions:
+  contents: read
 jobs:
   build-image:
     runs-on: ubuntu-latest

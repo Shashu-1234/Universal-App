@@ -1,6 +1,8 @@
 name: Mobile Build
 on:
   pull_request:
+permissions:
+  contents: read
 jobs:
   flutter-analyze:
     runs-on: ubuntu-latest
