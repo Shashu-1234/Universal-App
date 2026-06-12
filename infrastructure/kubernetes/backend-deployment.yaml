@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: universal-remote-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: universal-remote-backend
+  template:
+    metadata:
+      labels:
+        app: universal-remote-backend
+    spec:
+      containers:
+        - name: backend
+          image: ghcr.io/shashu-1234/universal-app-backend:latest
+          ports:
+            - containerPort: 3000
